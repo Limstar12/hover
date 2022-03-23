@@ -1,0 +1,80 @@
+*{
+    padding: 0;
+    margin: 0;   
+}
+li{ list-style: none; }
+a{ text-decoration: none; }
+
+/* 우측 퀵메뉴 */
+#quick{ position: fixed; top: 50%; right: 0; transform: translateY(-50%); width: 50px; border: 1px solid #222;}
+#quick li:not(:last-child){
+    border-bottom: 1px solid #222;
+}
+#quick li a{display: flex; width: 130px; line-height: 50px; transition: margin 0.5s}
+#quick li i{ width: 50px;}
+#quick li:hover a{margin-left: -80px; }
+#quick li.quick1 a{ background-color: yellow; }
+#quick li.quick2 a{background-color: green;}
+#quick li.quick3 a{background-color: gray;}
+
+
+
+/* 좌측 퀵메뉴 */
+#navibar{ position: fixed; top: 50%; left: 0; transform: translateY(-50%); width: 50px; border: 1px solid #222;}
+#navibar li:not(:last-child){
+    border-bottom: 1px solid #222;
+}
+#navibar li a{display: flex; flex-direction: row-reverse; width: 130px; line-height: 50px; transition: margin 0.5s; margin-left: -80px;}
+#navibar li i{ width: 50px;}
+
+#navibar li:hover a{margin-left: 0; }
+#navibar li.navibar1 a{ background-color: yellow; }
+#navibar li.navibar2 a{background-color: green;}
+#navibar li.navibar3 a{background-color: gray;}
+
+
+
+/* 상단 퀵메뉴 */
+#topbar{ position: fixed; left : 50%; top : 0; transform: translateX(-50%); border: 1px solid #222; height: 50px;}
+#topbar ul{display: flex;}
+#topbar li:not(:last-child){
+    border-bottom: 1px solid #222;
+
+}
+
+#topbar li a{display: flex; flex-direction: column-reverse; height: 130px; transition: margin 0.5s; margin-top: -80px;}
+#topbar li i{ height: 50px;}
+
+#topbar li:hover a{margin-top: 0; }
+#topbar li.topbar1 a{ background-color: yellow; }
+#topbar li.topbar2 a{background-color: green;}
+#topbar li.topbar3 a{background-color: gray;}
+
+
+/* 하단 퀵메뉴 */
+#bottombar{ position: fixed; left : 50%; bottom: 0; transform: translateX(-50%); border: 1px solid #222; height: 50px;}
+#bottombar ul{display: flex;}
+#bottombar li:not(:last-child){
+    border-bottom: 1px solid #222;
+
+}
+
+#bottombar li{}
+#bottombar li a{display: flex; height: 130px; transition: margin 0.5s; position: relative; bottom:0; margin-top: 0px; flex-direction: column;}
+#bottombar li i{ height: 50px;}
+
+#bottombar li:hover a{margin-top: -80px; }
+#bottombar li.bottombar1 a{ background-color: yellow; }
+#bottombar li.bottombar2 a{background-color: green;}
+#bottombar li.bottombar3 a{background-color: gray;}
+
+
+
+
+/* scss 5단이상부터는 에러남 */
+/* position: fixed 브라우저를 기준으로 붙어있는 애. 부모자식관계에서 맨 윗사람에게 줘야함 */
+/*  list-style: none; 리스트 스타일 (점박이 수정) */
+/* text-decoration: none; 밑줄표시 수정 */
+/* a태그일 경우 display : block 또는 flex를 주는게 맘이 편하다 */
+/* display : block(방해하다.막아버린다)은 유전받지 않는다. */
+/* flex-direction: column-reverse : 텍스트 순서 및 줄바꿈 */
